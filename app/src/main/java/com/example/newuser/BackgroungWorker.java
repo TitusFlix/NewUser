@@ -18,6 +18,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 public class BackgroungWorker extends AsyncTask<String, Void, String> {
+    //context
     Context context;
     AlertDialog alertDialog;
     BackgroungWorker(Context ctx){
