@@ -27,44 +27,6 @@ public class Register extends AppCompatActivity {
         phone=(EditText) findViewById(R.id.et_phone );
         email=(EditText) findViewById(R.id.et_email );
         btn_reg=(Button) findViewById(R.id.btn_reg);
-        /*btn_reg.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                progress=new ProgressDialog(Register.this);
-                progress.setMax(100);
-                progress.setMessage("Please Wait..");
-                progress.setTitle("Register");
-                progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-                progress.show();
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            while (progress.getProgress()<=progress.getMax()){
-                                Thread.sleep(200);
-                                handle.sendMessage(handle.obtainMessage());
-                                if(progress.getProgress()==progress.getMax())
-                                {
-                                    progress.dismiss();
-                                }
-                            }
-
-                        }catch (Exception e){
-                            e.printStackTrace();
-                        }
-                    }
-                }).start();
-
-            }
-            Handler handle= new Handler(){
-                @Override
-                public void handleMessage(Message msg){
-                    super.handleMessage(msg);
-                    progress.incrementProgressBy(1);
-
-                }
-            };
-        });*/
 
     }
     public void OnReg(View view){
