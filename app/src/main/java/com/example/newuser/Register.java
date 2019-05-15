@@ -1,11 +1,14 @@
 package com.example.newuser;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -62,5 +65,23 @@ public class Register extends AppCompatActivity {
             email.getText().clear();
         }
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.menuLogout:
+                startActivity(new Intent(Register.this,MainActivity.class));
+                break;
+            case R.id.menuSettings:
+                Toast.makeText(this,"You Just Clicked Settings", Toast.LENGTH_LONG).show();
+        }
+        return true;
     }
 }
