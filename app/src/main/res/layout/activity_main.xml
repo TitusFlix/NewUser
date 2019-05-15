@@ -37,8 +37,9 @@
             android:id="@+id/btn_reg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#db5a6b"
+            android:background="#f0eccd"
             android:onClick="OpenReg"
+            android:drawableLeft="@drawable/login"
             android:textColor="#000000"
             android:text="Proceed to Registration" />
         <ImageView

@@ -74,6 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="OnReg"
+            android:drawableLeft="@drawable/register"
             android:textColor="#000503"
             android:background="#0eff24"
             android:text="Register Now" />
