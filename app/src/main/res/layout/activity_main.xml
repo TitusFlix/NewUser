@@ -19,11 +19,14 @@
             android:layout_width="match_parent"
             android:layout_height="110dp"
             android:background="?attr/colorButtonNormal"
+            android:textColor="#230d0a"
             android:text="WELCOME TO NGONG SACCO"
             android:textSize="29sp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#0b040f"
+            android:textSize="15sp"
             android:text="Enter Email or Cell to Proceed"/>
         <EditText
             android:id="@+id/etUserName"
@@ -36,10 +39,16 @@
             android:layout_height="wrap_content"
             android:background="#db5a6b"
             android:onClick="OpenReg"
+            android:textColor="#000000"
             android:text="Proceed to Registration" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#f2fbfb"
+            android:src="@drawable/sacco"
+            android:scaleX="1"
+            android:scaleY=".8"
+            />
     </LinearLayout>
-
-
-
 
 </GridLayout>
