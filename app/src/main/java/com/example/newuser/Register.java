@@ -78,7 +78,8 @@ public class Register extends AppCompatActivity {
         switch(item.getItemId()){
             case R.id.menuLogout:
                 startActivity(new Intent(Register.this,MainActivity.class));
-                finish();
+                //finish();
+                System.exit(0);
                 break;
             case R.id.menuSettings:
                 Toast.makeText(this,"You Just Clicked Settings", Toast.LENGTH_LONG).show();
