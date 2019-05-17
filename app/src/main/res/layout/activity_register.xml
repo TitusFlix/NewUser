@@ -14,33 +14,37 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:text="Register New Members"
             android:textSize="29sp"
             android:textColor="#f94800"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:textColor="#000503"
             android:text="First Name"/>
         <EditText
             android:id="@+id/et_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"/>
+            android:inputType="textCapWords" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:textColor="#000503"
             android:text="Surname"/>
         <EditText
             android:id="@+id/et_surname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"/>
+            android:inputType="textCapWords"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:textColor="#000503"
             android:text="Enter ID Number"/>
         <EditText
@@ -52,6 +56,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:textColor="#000503"
             android:text="Enter Phone"/>
         <EditText
@@ -62,6 +67,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:textColor="#000503"
             android:text="Enter Email"/>
         <EditText
@@ -72,6 +78,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:textColor="#000503"
             android:text="Gender"/>
         <Spinner

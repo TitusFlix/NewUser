@@ -18,6 +18,7 @@
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="110dp"
+            android:textStyle="bold"
             android:background="?attr/colorButtonNormal"
             android:textColor="#230d0a"
             android:text="WELCOME TO NGONG SACCO"
@@ -25,6 +26,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:textColor="#0b040f"
             android:textSize="15sp"
             android:text="Enter Email or Cell to Proceed"/>
