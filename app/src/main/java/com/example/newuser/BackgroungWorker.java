@@ -75,6 +75,7 @@ public class BackgroungWorker extends AsyncTask<String, Void, String> {
                 String id =params[3];
                 String phone =params[4];
                 String email =params[5];
+                String gender =params[6];
 
 
                 URL url=new URL(reg_url);
@@ -88,7 +89,8 @@ public class BackgroungWorker extends AsyncTask<String, Void, String> {
                         URLEncoder.encode("surname","UTF-8")+ "="+URLEncoder.encode(surname,"UTF-8")+"&"+
                         URLEncoder.encode("id","UTF-8")+ "="+URLEncoder.encode(id,"UTF-8")+"&"+
                         URLEncoder.encode("phone","UTF-8")+ "="+URLEncoder.encode(phone,"UTF-8")+"&"+
-                        URLEncoder.encode("email","UTF-8")+ "="+URLEncoder.encode(email,"UTF-8");
+                        URLEncoder.encode("email","UTF-8")+ "="+URLEncoder.encode(email,"UTF-8")+"&"+
+                        URLEncoder.encode("gender","UTF-8")+ "="+URLEncoder.encode(gender,"UTF-8");
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
                 bufferedWriter.close();

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+ xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -68,17 +69,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000503"
+            android:text="Gender"/>
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"/>
 
         <Button
             android:id="@+id/btn_reg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="OnReg"
-
+            android:textSize="20dp"
             android:textColor="#000503"
-            android:background="#0eff24"
+            android:background="#f0eccd"
+            android:elevation="5dp"
             android:text="Register Now" />
 
     </LinearLayout>
 
-</GridLayout>
+</ScrollView>
