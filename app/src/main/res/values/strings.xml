@@ -2,8 +2,22 @@
     <string name="app_name">New User</string>
     <string-array name="gender">
         <item>Select</item>
-        <item>Female</item>
-        <item>Male</item>
+        <item>F</item>
+        <item>M</item>
         <item>Prefer Not to Say</item>
+    </string-array>
+    <string-array name="title">
+        <item>Select</item>
+        <item>Mr</item>
+        <item>Mrs</item>
+    </string-array>
+    <string-array name="status">
+        <item>Select</item>
+        <item>Single</item>
+        <item>Married</item>
+        <item>Live-in</item>
+        <item>Divorced</item>
+        <item>Widow</item>
+        <item>Widower</item>
     </string-array>
 </resources>

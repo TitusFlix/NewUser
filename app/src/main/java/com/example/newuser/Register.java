@@ -17,11 +17,13 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
-    EditText fname,surname, id, phone,email;
-    String str_name,str_surname,str_id,str_phone;
+    EditText fname,surname,mothername, id, phone,email,address;
+    //String str_name,str_surname,str_id,str_phone;
     private ProgressDialog progress;
     Button btn_reg;
     Spinner spinner;
+    Spinner spinner0;
+    Spinner spinner1;
 
 
     @Override
@@ -30,15 +32,27 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
         fname=(EditText) findViewById(R.id.et_name);
         surname=(EditText) findViewById(R.id.et_surname);
+        mothername= (EditText) findViewById(R.id.et_mothername);
         id=(EditText) findViewById(R.id.et_id);
         phone=(EditText) findViewById(R.id.et_phone );
         email=(EditText) findViewById(R.id.et_email );
+        address=(EditText) findViewById(R.id.et_address);
         btn_reg=(Button) findViewById(R.id.btn_reg);
         spinner=(Spinner) findViewById(R.id.spinner1);
+        spinner0=(Spinner) findViewById(R.id.spinner2);
+        spinner1=(Spinner) findViewById(R.id.spinner3);
         ArrayAdapter<String> adapter= new ArrayAdapter<String>(Register.this,
         android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.gender));
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
+        ArrayAdapter<String> adapter0= new ArrayAdapter<String>(Register.this,
+                android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.title));
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner0.setAdapter(adapter0);
+        ArrayAdapter<String> adapter1= new ArrayAdapter<String>(Register.this,
+                android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.status));
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner1.setAdapter(adapter1);
 
     }
     public void OnReg(View view){
@@ -68,17 +82,26 @@ public class Register extends AppCompatActivity {
             String str_phone = phone.getText().toString().trim();
             String str_email = email.getText().toString().trim();
             String str_gender = spinner.getSelectedItem().toString().trim();
+            String str_mothername = mothername.getText().toString().trim();
+            String str_address = address.getText().toString().trim();
+            String str_title = spinner0.getSelectedItem().toString().trim();
+            String str_status = spinner1.getSelectedItem().toString().trim();
             String type="register";
 
             BackgroungWorker backgroungWorker= new BackgroungWorker(this);
-            backgroungWorker.execute(type,str_name,str_surname,str_id,str_phone,str_email,str_gender);
+            backgroungWorker.execute(type,str_name,str_surname,str_id,str_phone,str_email,str_gender,str_mothername,str_address,str_title,str_status);
             Toast.makeText(this,"Process Initiated",Toast.LENGTH_SHORT).show();
             fname.getText().clear();
             surname.getText().clear();
             id.getText().clear();
             phone.getText().clear();
             email.getText().clear();
+            mothername.getText().clear();
+            address.getText().clear();
             spinner.setSelection(0);
+            spinner0.setSelection(0);
+            spinner1.setSelection(0);
+
         }
 
     }

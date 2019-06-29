@@ -65,8 +65,8 @@ public class BackgroungWorker extends AsyncTask<String, Void, String> {
     protected String doInBackground(String... params) {
         String type=params[0];
         //urls..
-        String reg_url="http://192.168.0.108/userReg/register.php";
-        String login_url="http://192.168.0.108/userReg/login.php";
+        String reg_url="http://192.168.0.104/register/register.php";
+        String login_url="http://192.168.0.104/register/login.php";
         if(type.equals("register"))
         {
             try {
@@ -76,6 +76,11 @@ public class BackgroungWorker extends AsyncTask<String, Void, String> {
                 String phone =params[4];
                 String email =params[5];
                 String gender =params[6];
+                String mothername =params[7];
+                String address =params[8];
+                String title =params[9];
+                String status =params[10];
+
 
 
                 URL url=new URL(reg_url);
@@ -90,7 +95,11 @@ public class BackgroungWorker extends AsyncTask<String, Void, String> {
                         URLEncoder.encode("id","UTF-8")+ "="+URLEncoder.encode(id,"UTF-8")+"&"+
                         URLEncoder.encode("phone","UTF-8")+ "="+URLEncoder.encode(phone,"UTF-8")+"&"+
                         URLEncoder.encode("email","UTF-8")+ "="+URLEncoder.encode(email,"UTF-8")+"&"+
-                        URLEncoder.encode("gender","UTF-8")+ "="+URLEncoder.encode(gender,"UTF-8");
+                        URLEncoder.encode("gender","UTF-8")+ "="+URLEncoder.encode(gender,"UTF-8")+"&"+
+                        URLEncoder.encode("mothername","UTF-8")+ "="+URLEncoder.encode(mothername,"UTF-8")+"&"+
+                        URLEncoder.encode("address","UTF-8")+ "="+URLEncoder.encode(address,"UTF-8")+"&"+
+                        URLEncoder.encode("title","UTF-8")+ "="+URLEncoder.encode(title,"UTF-8")+"&"+
+                        URLEncoder.encode("status","UTF-8")+ "="+URLEncoder.encode(status,"UTF-8");
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
