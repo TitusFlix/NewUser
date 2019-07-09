@@ -65,8 +65,8 @@ public class BackgroungWorker extends AsyncTask<String, Void, String> {
     protected String doInBackground(String... params) {
         String type=params[0];
         //urls..
-        String reg_url="http://192.168.0.104/register/register.php";
-        String login_url="http://192.168.0.104/register/login.php";
+        String reg_url="http://192.168.0.101/register/register.php";
+        String login_url="http://192.168.0.101/register/login.php";
         if(type.equals("register"))
         {
             try {
@@ -80,6 +80,14 @@ public class BackgroungWorker extends AsyncTask<String, Void, String> {
                 String address =params[8];
                 String title =params[9];
                 String status =params[10];
+                //kin
+                String kinnanes =params[11];
+                String kinidno =params[12];
+                String kinaddress =params[13];
+                String telephone =params[14];
+                String town =params[15];
+               // String age =params[16];
+                String relationship =params[16];
 
 
 
@@ -99,7 +107,14 @@ public class BackgroungWorker extends AsyncTask<String, Void, String> {
                         URLEncoder.encode("mothername","UTF-8")+ "="+URLEncoder.encode(mothername,"UTF-8")+"&"+
                         URLEncoder.encode("address","UTF-8")+ "="+URLEncoder.encode(address,"UTF-8")+"&"+
                         URLEncoder.encode("title","UTF-8")+ "="+URLEncoder.encode(title,"UTF-8")+"&"+
-                        URLEncoder.encode("status","UTF-8")+ "="+URLEncoder.encode(status,"UTF-8");
+                        URLEncoder.encode("status","UTF-8")+ "="+URLEncoder.encode(status,"UTF-8")+"&"+
+                        URLEncoder.encode("kinnames","UTF-8")+ "="+URLEncoder.encode(kinnanes,"UTF-8")+"&"+
+                        URLEncoder.encode("kinidno","UTF-8")+ "="+URLEncoder.encode(kinidno,"UTF-8")+"&"+
+                        URLEncoder.encode("kinaddress","UTF-8")+ "="+URLEncoder.encode(kinaddress,"UTF-8")+"&"+
+                        URLEncoder.encode("telephone","UTF-8")+ "="+URLEncoder.encode(telephone,"UTF-8")+"&"+
+                        URLEncoder.encode("town","UTF-8")+ "="+URLEncoder.encode(town,"UTF-8")+"&"+
+                        //URLEncoder.encode("age","UTF-8")+ "="+URLEncoder.encode(age,"UTF-8")+"&"+
+                        URLEncoder.encode("relationship","UTF-8")+ "="+URLEncoder.encode(relationship,"UTF-8");
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
                 bufferedWriter.close();

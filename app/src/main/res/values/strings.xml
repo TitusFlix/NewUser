@@ -20,4 +20,19 @@
         <item>Widow</item>
         <item>Widower</item>
     </string-array>
+    <string-array name="relationship">
+        <item>SELECT</item>
+        <item>FATHER</item>
+        <item>MOTHER</item>
+        <item>HUSBAND</item>
+        <item>WIFE</item>
+        <item>BROTHER</item>
+        <item>SISTER</item>
+        <item>SON</item>
+        <item>DAUGHTER</item>
+        <item>GRAND SON</item>
+        <item>GRAND DAUGHTER</item>
+        <item>AUNT</item>
+        <item>NEPHEW</item>
+    </string-array>
 </resources>
